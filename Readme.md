@@ -12,9 +12,9 @@ During the entire month of October 2020, all you have to do is contribute to any
 
 The Hacktoberfest’s simple plain objective is:
 
-    Support open source and earn a limited edition T-shirt!
+    Support open source
 
-But, it’s not just about the t-shirts/trees or stickers. Its about supporting open source. Its about celebrating open source, and giving it back. If you’ve never contributed to open source before, this is the perfect time to get started because Hacktoberfest provides a large list of available contribution opportunities (and yes, there are always plenty for beginners too).
+Its about supporting open source. Its about celebrating open source, and giving it back. If you’ve never contributed to open source before, this is the perfect time to get started because Hacktoberfest provides a large list of available contribution opportunities (and yes, there are always plenty for beginners too).
 
 ## 👌 What Can I Contribute?
 
@@ -27,13 +27,6 @@ You can contribute to any open source project hosted on Github.com and contribut
 ## How to contribute
 Submit your pull request here for Hacktoberfest-2021 in any language you prefer, if language folder not present, create one as a part of it, after script add your name and GitHub profile into Contributors.md file.
 
-👕 Win Your T-Shirt/Tree
-
-In past years, shirts have arrived in November or December, depending on how far you live from San Francisco.
-
-The Digital Ocean team should eventually contact you asking for your shirt size and shipping address. (Keep in mind they are shipping 40,000 shirts so this process will take a while.) And yes, they will ship internationally.
-
-Don’t miss this opportunity. Start contributing to open source and get a limited edition T-shirt for Free! And also, Stickers!
 
 
 ![image](https://user-images.githubusercontent.com/36507578/135815131-10d36244-ecfc-49fd-a525-223eefb29a12.png)
@@ -46,7 +39,7 @@ Pull requests can be made in any GitHub-hosted repositories/projects.
 Sign up anytime between October 1 and October 31.
 
 # Rules
-To qualify for the official limited edition Hacktoberfest shirt, you must register and make four pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub, not only the ones with issues labeled Hacktoberfest. If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate. This year, the first 70,000 participants who successfully complete the challenge will earn a T-shirt.
+To qualify for Hacktoberfest, you must register and make four pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub with issues labeled Hacktoberfest. If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate. 
 
 
 # Do's and Dont's of Hacktoberfest
