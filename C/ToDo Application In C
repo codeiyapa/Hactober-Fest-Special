@@ -1,0 +1,163 @@
+//Author : Rahul Kumar Roy
+//Project : ToDo Application in C
+//Date : 10-10-21 (sunday)
+#include <stdio.h>
+#include <stdlib.h>
+struct nodeToDo
+{
+    int count;
+    char str[150];
+    struct nodeToDo *next;
+};
+struct nodeToDo *head = NULL;
+
+struct nodeToDo *createNode()
+{
+    struct nodeToDo *newNode;
+    newNode = (struct nodeToDo *)malloc(sizeof(struct nodeToDo));
+    return newNode;
+}
+
+void insertNote()
+{
+
+    struct nodeToDo *temp, *ptr;
+    temp = createNode();
+    printf("Enter your Note Please!\n");
+    fflush(stdin);
+    gets(temp->str);
+    temp->count = 1;
+    temp->next = NULL;
+    ptr = head; //this ptr will traverse the list
+    int countNote = 1;
+    if (head == NULL)
+    {
+        head = temp;
+    }
+    else
+    {
+        while (ptr->next != NULL)
+        {
+            ptr = ptr->next;
+            countNote = countNote + ptr->count;
+        }
+        temp->count = ptr->count + temp->count;
+        ptr->next = temp;
+    }
+}
+void traverse()
+{
+    struct nodeToDo *ptr;
+    ptr = head;
+    system("cls");
+    printf("---------Your ToDo List-------\n\n");
+    if (ptr == NULL)
+    {
+        printf("Your ToDo is Empty\n");
+        getch();
+        system("cls");
+        return;
+    }
+    if (ptr->next == NULL)
+    {
+        printf("(%d)---> %s", ptr->count, ptr->str);
+    }
+    else
+    {
+        while (ptr != NULL)
+        {
+            printf("(%d)---> %s\n", ptr->count, ptr->str);
+            ptr = ptr->next;
+        }
+    }
+    printf("\n");
+}
+
+// delete specific note from the list
+void deleteNote(int pos)
+{
+    struct nodeToDo *ptr, *prev;
+    ptr = head->next;
+    prev = head;
+
+   if (pos==1)
+   {
+       head = head->next;
+       while (prev->next!=NULL)
+       {
+           prev->count = prev->count-1;
+           prev = prev->next;
+       }
+       prev->count= prev->count-1;
+       
+   }
+   else
+   {
+        while (ptr->count != pos)
+    {
+        prev = prev->next;
+        ptr = ptr->next;
+    }
+    prev->next = ptr->next;
+    free(ptr);
+    prev = prev->next;
+    while (prev->next != NULL)
+    {
+        prev->count = prev->count - 1;
+        prev = prev->next;
+    }
+    prev->count = prev->count - 1;
+   }
+   
+   
+}
+int main()
+{
+    int choice, pos;
+    while (1)
+    {
+        system("cls");
+        printf("1   See Your ToDo\n");
+        printf("2   Create Your ToDo\n");
+        printf("3   Delete Your ToDo\n");
+        printf("4   Update Your ToDo\n");
+        printf("0   To Exit\n");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+        case 1:
+            traverse();
+            break;
+        case 2:
+            insertNote();
+            break;
+        case 3:
+            if (head == NULL)
+            {
+                printf("Todo list is Empty\n");
+                break;
+            }
+            else
+            {
+                printf("Enter Note Number You want to Delete in List\n");
+                scanf("%d", &pos);
+                deleteNote(pos);
+            }
+            break;
+        case 4:
+            printf("Add Note !\n");
+            insertNote();
+            break;
+        case 0:
+            exit(0);
+            break;
+        default:
+            printf("Enter valid choice only\n");
+            break;
+        }
+        getch();
+    }
+
+    return 0;
+}
