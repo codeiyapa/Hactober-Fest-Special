@@ -1,0 +1,13 @@
+#include<iostream.h>
+int main()
+{
+int a,b,result;
+cout<<"SUM of two integers values";
+cout<<"Enter first integer:"<<endl;
+cin>>a;
+cout<<"Enter second integer"<<endl;
+cin>>b;
+result=a+b;
+cout<<"Sum of "<<a<<" and "<<b <<" is "<<result;
+return 0;
+}
